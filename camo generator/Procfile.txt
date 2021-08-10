@@ -1,0 +1,1 @@
+web: gunicorn camo_project.wsgi --log-file -

@@ -1,0 +1,47 @@
+#display {
+    background-image: url('ruins.png');
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    height: 75vh;
+}
+
+#attack-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.beast {
+    margin: 1%;
+    
+    display: grid;
+    /* grid-template-rows: 95% auto; */
+}
+
+.beast-img {
+    margin-top: 5%;
+    width: 30vw;
+}
+
+.total-health {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 20px;
+    background-color: red;
+}
+
+.current-health {
+    
+    height: 100%;
+    
+    background-color: green;
+}
+
+.attack {
+    margin: 2%;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+        <link rel='stylesheet' href='styles.css'>
+        <title>Beasts in your Purse</title>
+    </head>
+
+    <body>
+        <div id='root'>
+            <div id='display'>
+                <div class='beast'>
+                    <img src='rainbow.png' class='beast-img'>
+                    <div class='total-health'>
+                        <div class='current-health' v-bind:style="{ width: myStats.health+'%' }"></div>
+                    </div>
+                </div>
+                <div class='beast'>
+                    <img src='lava.png' class='beast-img' >
+                    <div class='total-health'>
+                        <div class='current-health' v-bind:style="{ width: enemyStats.health+'%' }"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id='menu'>
+                <div id='attack-list'> 
+                    <button class='attack' @click='runTurn('sparkleStrike')'>Sparkle Strike</button>
+                    <button class='attack' @click='heckinChomp'>Heckin Chomp</button>
+                    <button class='attack'>Flippy Flap</button>
+                    <button class='attack' @click='strut'>Strut</button>
+                </div>
+                <div id='attack-messages'>
+                    <p>{{myLastAttackMessage}}</p>
+                    <p>{{enemyLastAttackMessage}}</p>
+                </div>
+            </div>
+
+            
+        </div>
+        <script src="https://unpkg.com/vue"></script>
+        <script src='script.js'></script>    
+    </body>
+
+</html>

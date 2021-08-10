@@ -50,7 +50,7 @@ def add_card(request):
 
 def add_link(request, card_id):
     card_got = get_object_or_404(Card,pk=card_id)
-    link_text = request.POST.get('link_text')
+    link_text = request.POST['link_text']
     Link.objects.create(text=link_text, card=card_got)
     cards = Card.objects.all()
     context = {

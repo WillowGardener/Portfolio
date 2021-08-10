@@ -37,18 +37,7 @@ function Attack(props) {
 
 }
 
-function Menu() {
-  
 
-  return (
-    <div className='menu'>
-      <Attack name='Sparkle Strike' />
-      <Attack name='Strut'/>
-      <Attack name='Flippy Flap' />
-      <Attack name='Heckin Chomp' />
-    </div>
-  )
-}
 
 const BeastContext = createContext()
 
@@ -90,7 +79,19 @@ const BeastProvider = props => {
   )
 }
 
+function Menu() {
+  const value = useContext(BeastContext)
 
+  return (
+    <div className='menu'>
+      <div>{value}</div>
+      <Attack name='Sparkle Strike' />
+      <Attack name='Strut'/>
+      <Attack name='Flippy Flap' />
+      <Attack name='Heckin Chomp' />
+    </div>
+  )
+}
 
 
 function App() {
@@ -100,7 +101,7 @@ function App() {
         <h1>Beasts in your Purse Aw Geeze!</h1>
       </header>
       <main>
-        <BeastProvider>
+        <BeastProvider value={'yo'}>
           <Display />
           <Menu />
         </BeastProvider>
